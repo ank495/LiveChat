@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Chat App</title>
+    <link rel="stylesheet" href="/css/adminStyle.css">
+</head>
+
+<body>
+    <ul class="pages">
+        <li class="chat page">
+            <div class="container">
+            </div>
+            <div class="usersOnline">
+                <h1>Admins Online</h1>
+                <ul class ="adminList" id="admins">                    
+                </ul>
+            </div>
+        </li>
+        <li class="login page">
+            <div class="card card-container">
+                <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                <p id="profile-name" class="profile-name-card"></p>
+                <form class="form-signin" action="">
+                    <input type="text" id="usernameInput" class="form-control" max-length = "14" placeholder="Username" required autofocus>
+                    <input type="password" id="passwordInput" class="form-control" max-length = "10" placeholder="Password" required>
+                     <button class="btn btn-lg btn-primary btn-block btn-signin"  id="submitButton" type="button">Sign in</button>
+                </form>
+            </div>
+      </li>
+        <li class="error page" style="display: none">
+            <div class="form">
+                <h3 class="title">Reconnecting...</h3>
+            </div>
+        </li>
+    </ul>
+    <audio id="windowSound">
+        <source src="/sounds/new_chat_window.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="chatSound">
+        <source src="/sounds/new_message.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="pokeSound">
+        <source src="/sounds/poke.mp3" type="audio/mpeg">
+    </audio>
+    <script src="/dependencies/jquery-3.2.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+
+</html>
